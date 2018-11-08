@@ -1,16 +1,3 @@
-// esp
-// /
-// if(status not =)
-	// respomse = new status
-// else
-	// response = no update
-
-
-// gh
-// /?light=*
-// dbc= set status = $light
-
-
 <?php
 define('DB_HOST', 'jfrpocyduwfg38kq.chr7pe7iynqr.eu-west-1.rds.amazonaws.com');
 define('DB_USER', 'b8wib9i2mk7g6ejb');
