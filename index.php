@@ -13,7 +13,7 @@ $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
  }else{
 	$query = "SELECT * FROM device_values";
 	$data = mysqli_query($dbc, $query);
-	$row = mysqli_fetch_array($data)
+	$row = mysqli_fetch_array($data);
 	echo $row['is_active']; 
  }
 mysqli_close($dbc); 
