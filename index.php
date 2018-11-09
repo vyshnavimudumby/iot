@@ -8,9 +8,16 @@ $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
  if(isset($_GET['value'])){
 	$value = $_GET['value'];
-	$query = "UPDATE device_values SET is_active = '$value' WHERE id = 1";
+	$rowValue;
+	if(strtolower($value) == "on") {
+		$rowValue = 1;
+	} else 
+		if(strtolower($value) == "off"){
+		$rowValue = 0;
+	}
+	$query = "UPDATE device_values SET is_active = '$rowValue' WHERE id = 1";
 	mysqli_query($dbc, $query);
-	echo "Row updated";
+	echo "Row value updated to ". $rowValue;
  }else{
 	$query = "SELECT * FROM device_values";
 	$data = mysqli_query($dbc, $query);
