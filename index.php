@@ -8,8 +8,9 @@ $dbc = mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME);
 
  if(isset($_GET['value'])){
 	$value = $_GET['value'];
-	$query = "UPDATE mismatch_user SET is_active = '$value' WHERE id = 1";
+	$query = "UPDATE device_values SET is_active = '$value' WHERE id = 1";
 	mysqli_query($dbc, $query);
+	echo "Row updated";
  }else{
 	$query = "SELECT * FROM device_values";
 	$data = mysqli_query($dbc, $query);
